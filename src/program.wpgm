@@ -1,0 +1,35 @@
+import wollok.game.*
+import autitos.*
+program abc {
+	game.title("Autitos")
+	game.width(12)
+	game.height(10)
+	game.addVisual(corsaRojo)
+	
+	keyboard.x().onPressDo(
+		{
+			corsaRojo.alternarImagen()
+		}
+	)
+	keyboard.up().onPressDo(
+		{
+			corsaRojo.moveteArriba()
+		}
+	)
+	keyboard.down().onPressDo(
+		{
+			corsaRojo.moveteAbajo()
+		}
+	)
+	keyboard.left().onPressDo(
+		{
+			corsaRojo.moveteDerecha()
+		}
+	)
+	keyboard.right().onPressDo(
+		{
+			corsaRojo.moveteIzquierda()
+		}
+	)
+	game.start()
+}
